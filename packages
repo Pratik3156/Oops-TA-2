@@ -14,7 +14,14 @@ import mypackage.Greeting; // Importing the class from package
 
 public class Main {
     public static void main(String[] args) {
-        Greeting g = new Greeting(); // Creating object from package class
-        g.sayHello(); // Calling method
+        Greeting g = new Greeting(); 
+        g.sayHello(); 
     }
 }
+
+//compiling and running
+javac mypackage/Greeting.java
+javac Main.java  //main program
+
+java Main   //running program
+
