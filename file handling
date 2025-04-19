@@ -1,0 +1,28 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            File file = new File("example.txt");
+
+            FileWriter writer = new FileWriter(file);
+            writer.write("Hello, this is a simple file handling example.");
+            writer.close();
+            System.out.println("File written successfully.");
+
+            FileReader reader = new FileReader(file);
+            int character;
+            System.out.print("File content: ");
+            while ((character = reader.read()) != -1) {
+                System.out.print((char) character);
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred:");
+            e.printStackTrace();
+        }
+    }
+}
