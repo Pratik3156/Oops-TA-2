@@ -1,0 +1,27 @@
+// Generic class Box
+class Box<T> {
+    private T value;
+
+    public Box(T value) {
+        this.value = value;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public <U> void display(U item) {
+        System.out.println("Box contains: " + value);
+        System.out.println("Extra item of type " + item.getClass().getSimpleName() + ": " + item);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Box<Integer> intBox = new Box<>(123);
+        intBox.display("This is an integer box");
+
+        Box<String> strBox = new Box<>("Hello");
+        strBox.display(3.14); 
+    }
+}
