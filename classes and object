@@ -1,6 +1,5 @@
 
 class Car {
-    
     String brand;
     String color;
     int year;
