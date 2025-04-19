@@ -1,0 +1,24 @@
+interface Washable {
+    void wash(); 
+}
+
+class Clothes implements Washable {
+    public void wash() {
+        System.out.println("Washing the clothes...");
+    }
+}
+
+class Dishes implements Washable {
+    public void wash() {
+        System.out.println("Washing the dishes...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Washable item1 = new Clothes();
+        item1.wash();
+        Washable item2 = new Dishes();
+        item2.wash();
+    }
+}
